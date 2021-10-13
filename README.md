@@ -1,18 +1,23 @@
-# PEAK PCAN firmware for STM32F042 based boards
+# PEAK PCAN firmware for STM32F072 based boards
 
-## Target Hardware
+## 软件
+- 软件修改自 [pcan_cantact](https://github.com/moonglow/pcan_cantact) 
+- 增加 24C02 存储器实现 PCAN-View 中的设备 ID 设置功能
 
-* [CANtact](https://github.com/linklayer/cantact-hw) - opensource USB-CAN adapter project `make cantact-16`
-* [CANable](https://canable.io/) - opensource USB-CAN adapter based on CANtact project `make canable`
-* [Entreé](https://github.com/tuna-f1sh/entree) - opensource USB-C CAN adapter based on CANable project `make entree`
-* Any other STM32F042 based boards with external or internal OSC.
+## 硬件
+- 硬件在CANable基础上增加 24C02 存储器
+	- PB13：24C02 - WP
+	- PB14：24C02 - SCL
+	- PB15：24C02 - SDA 
+- 因程序大小超出 STM32F042C6 存储器容量，应使用 STM32F072C8
 
-## Toolchain
+## 环境
 
-* GNU Arm Embedded Toolchain
+- MDK-ARM V5.33
 
 
 License
 ----
 
 WTFPL
+
