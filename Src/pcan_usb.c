@@ -8,6 +8,8 @@
 #include "pcan_led.h"
 #include "pcan_usb.h"
 
+extern uint8_t eep_canID;
+
 USBD_HandleTypeDef hUsbDeviceFS;
 extern USBD_DescriptorsTypeDef FS_Desc;
 static struct t_class_data pcan_data = { 0 };
